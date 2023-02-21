@@ -20,7 +20,7 @@
     <title>Portfolio-pank</title>
 </head>
 
-<body>
+<body onload="filter('projects')">
     <video autoplay muted loop id="myVideo">
         <source src="assets/img/Black - 13495.mp4" type="video/mp4">
     </video>
@@ -188,47 +188,135 @@
             <h2 class="section__title">My Portfolio</h2>
             <div class="sa3_headline_sec">
                 <ul class="filter-menu">
-                    <li onclick="filterSelection('all')">All Projects</li>
-                    <li onclick="filterSelection('webs')">Webs</li>
-                    <li onclick="filterSelection('uis')">UI's designs</li>
-                    <li onclick="filterSelection('apps')">Apps</li>
+                    <li onclick="filter('projects')">All Projects</li>
+                    <li onclick="filter('webs')">Webs</li>
+                    <li onclick="filter('ui')">UI's designs</li>
+                    <li onclick="filter('apps')">Apps</li>
 
                 </ul>
             </div>
             <div class="trick__container container grid">
 
-                <div class="trick__content column">
+
+                <div class="trick__content column projects">
                     <img src="assets/img/voice-bot.png" alt="" class="trick__img">
                     <h3 class="trick__title">Voice chat bot</h3>
                     <span class="trick__subtitle">project arriving soon.</span>
                 </div>
 
-                <div class="trick__content column">
+                <div class="trick__content column projects">
                     <img src="assets/img/video-call.png" alt="" class="trick__img">
                     <h3 class="trick__title">Meeting application</h3>
                     <span class="trick__subtitle">project arriving soon.</span>
                 </div>
 
-                <div class="trick__content column">
+                <div class="trick__content column projects">
                     <img src="assets/img/prosthetic.png" alt="" class="trick__img">
                     <h3 class="trick__title">
                         Rehabilitation Hand-gloves</h3>
                     <span class="trick__subtitle">project arriving soon.</span>
                 </div>
+                <div class="trick__content column projects">
+                    <img src="assets/img/video-play.png" alt="" class="trick__img">
+                    <h3 class="trick__title">
+                        Youtube clone </h3>
+                    <span class="trick__subtitle"><i>All Exclusive features.</i></span>
+                    <span class="trick__subtitle">project arriving soon.</span>
+                </div>
+
+                <div class="trick__content column webs">
+                    <img src="assets/img/application.png" alt="">
+                    <h3 class="trick__title">
+                        Muscular-soul gym website</h3>
+                    <!-- <span class="trick__subtitle">project arriving soon.</span> -->
+                    <span class="trick__subtitle"><a href="https://github.com/vvc10/muscularsoulgym-web">View project
+                            &#8599;</a></span>
+                </div>
+                <div class="trick__content column webs">
+                    <img src="assets/img/application.png" alt="">
+                    <h3 class="trick__title">
+                        E-commerce shopping website</h3>
+                    <span class="trick__subtitle">project arriving soon.</span>
+                    <!-- <span class="trick__subtitle"><a href="https://github.com/vvc10/muscularsoulgym-web">View project
+                            &#8599;</a></span> -->
+                </div>
+                <div class="trick__content column webs">
+                    <img src="assets/img/application.png" alt="">
+                    <h3 class="trick__title">
+                       Personal portfolio</h3>
+                    <span class="trick__subtitle">project arriving soon.</span>
+                    <!-- <span class="trick__subtitle"><a href="https://github.com/vvc10/muscularsoulgym-web">View project
+                            &#8599;</a></span> -->
+                </div>
+                <div class="trick__content column webs">
+                    <img src="assets/img/application.png" alt="">
+                    <h3 class="trick__title">
+                       Medical/Health website</h3>
+                    <span class="trick__subtitle">project arriving soon.</span>
+                    <!-- <span class="trick__subtitle"><a href="https://github.com/vvc10/muscularsoulgym-web">View project
+                            &#8599;</a></span> -->
+                </div>
+                <div class="trick__content column ui">
+                    <img src="assets/img/vector.png" alt="" class="trick__img">
+                    <h3 class="trick__title">
+                      Graphic Designs </h3>
+                      <span class="trick__subtitle"><a href="https://drive.google.com/drive/folders/1dl5l2YiHkvx8VjayfB43L1bzwp_wBaRC?usp=sharing'">Drive link &#8599;</a></span>
+                      <!-- <span class="trick__subtitle">project arriving soon.</span> -->
+                </div>
+                <div class="trick__content column apps">
+                    <img src="assets/img/app-development (1).png" alt="" class="trick__img">
+                    <h3 class="trick__title">
+                     Flipkart clone (light)</h3>
+                      <!-- <span class="trick__subtitle"><a href="https://drive.google.com/drive/folders/1dl5l2YiHkvx8VjayfB43L1bzwp_wBaRC?usp=sharing'">Drive link &#8599;</a></span> -->
+                      <span class="trick__subtitle">project arriving soon.</span>
+                </div>
+                <!-- <div class=" trick__content column webs">
+                    <img src="assets/img/Untitled design.jpg" alt="">
+                    <h3 class="trick__title">
+                        Personal portfolio's</h3>
+                    <span class="trick__subtitle">project arriving soon.</span>
+                    <span class="trick__subtitle"><a href="vvc10.github.io/portfolio">View project &#8599;</a></span>
+                </div> -->
+            </div>
 
         </section>
 
         <!--==================== DISCOUNT ====================-->
-        <!-- <section class="section discount">
-            <div class="discount__container container grid">
-                <div class="discount__data">
-                    <h2 class="discount__title">50% Discount <br> On New Products</h2>
-                    <a href="#" class="button">Go to new</a>
-                </div>
+        <section class="section contact_details">
 
-                <img src="assets/img/discount-img.png" alt="" class="discount__img">
+            <div class="contact__container container grid">
+                <div class="contact_details_head">
+                    Reach me out
+                </div>
+                <div class="contact__container_ii">
+                    <div class="contact__data">
+                        <img src="assets/img/email (1).png">
+                        <div class="contact__data_i">
+                            <span>
+                                write me an Email</span>
+                            <p><a href="">vvastcore10@gmail.com</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__data">
+                        <img src="assets/img/phone-call.png">
+                        <div class="contact__data_i">
+                            <span>
+
+                                Discuss on call</span>
+                            <p><a href="">+91-123456789</a></p>
+                        </div>
+                    </div>
+                    <div class="contact__data">
+                        <img src="assets/img/telegram (1).png">
+                        <div class="contact__data_i">
+                            <span>
+                                Text me, hii!</span>
+                            <p><a href="">@pankchillin</a></p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </section> -->
+        </section>
 
         <!--==================== OUR NEWSLETTER => (CONTACT US) ====================-->
         <section class="section newsletter">
@@ -292,6 +380,9 @@
 
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
+    <!-- <script>
+       
+    </script> -->
 </body>
 
 </html>
