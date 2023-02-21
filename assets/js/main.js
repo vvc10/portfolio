@@ -10,7 +10,7 @@ fetch(
     .then(data => {
         const lastCommitDate = new Date(data[0].commit.committer.date);
         document.getElementById("last-commit-date").innerHTML =
-         "Last updated on " + lastCommitDate.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
+            "Last updated on " + lastCommitDate.toLocaleDateString("en-US", { day: "numeric", month: "long", year: "numeric" });
     });
 
 
@@ -43,30 +43,35 @@ function scrollFunction() {
     if (document.body.scrollTop > 90 ||
         document.documentElement.scrollTop > 90) {
         document.getElementById("navbar")
-
             .style.margin = "0 0";
 
         document.getElementById("navbar")
             .style.borderRadius = "0 0 2rem 2rem";
-        document.getElementById("navbar")
 
+        document.getElementById("navbar")
             .style.maxWidth = '100%';
 
-        document.getElementsByClassName("header").style.removeProperty('background-color');
+        document.getElementById("navbar")
+            .style.backgroundColor = 'hsl(0, 0%, 13%, 1)';
+
+        document.getElementsByClassName("header")
+            .style.removeProperty('background-color');
 
 
     }
     else {
 
         document.getElementById("navbar")
-
             .style.margin = "1.5rem auto";
 
         document.getElementById("navbar")
             .style.borderRadius = "2rem";
-        document.getElementById("navbar")
 
+        document.getElementById("navbar")
             .style.maxWidth = '968px';
+            
+        document.getElementById("navbar")
+            .style.backgroundColor = 'hsl(0, 0%, 13%, 0.9)';
 
         document.getElementById("header")
             .style.padding = '0rem 1rem';
@@ -81,46 +86,21 @@ function scrollFunction() {
 
 // filter category section //
 
-filterSelection("all")
-function filterSelection(c) {
-    var x, i;
-    x = document.getElementsByClassName("column");
-    if (c == "all") c = "";
-    for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-    }
-    const div = document.querySelector('.notavail');
-    if (div.classList.contains(c)) {
-        document.getElementsByClassName("notavail").style.display = "block";
-    }
-    else {
-        document.getElementsByClassName("notavail").style.display = "none";
-
-    }
-
-
-}
-
-function w3AddClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
-    }
-}
-
-function w3RemoveClass(element, name) {
-    var i, arr1, arr2;
-    arr1 = element.className.split(" ");
-    arr2 = name.split(" ");
-    for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-            arr1.splice(arr1.indexOf(arr2[i]), 1);
+var elements = {
+    projects: document.getElementsByClassName("projects"),
+    webs: document.getElementsByClassName("webs"),
+    ui: document.getElementsByClassName("ui"),
+    apps: document.getElementsByClassName("apps")
+};
+function filter(type) {
+    Object.keys(elements).forEach(function (key) {
+        var els = elements[key];
+        var state = "none";
+        if (key === type) state = "block";
+        for (var i = 0; i < els.length; i++) {
+            els[i].style.display = state;
         }
-    }
-    element.className = arr1.join(" ");
+    });
 }
 
 // 
