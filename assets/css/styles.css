@@ -1306,7 +1306,9 @@ button {
     font-size: 0.9rem;
 
   }
-
+.painter_img{
+  height: 30px!important;
+}
   .download_btn_area {
     margin-left: 4rem;
     margin-top: 1rem;
@@ -2726,7 +2728,13 @@ button {
     transform: translate(0, -0px);
   }
 }
-
+#demo{
+  padding: 0.5rem 0.2rem;
+  background-color: rgb(255, 140, 5, .3);
+  line-height: 1rem;
+  height: fit-content;
+  border-radius: 2px;
+}
 
 
 /*
